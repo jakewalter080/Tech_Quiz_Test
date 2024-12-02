@@ -70,3 +70,19 @@ describe('Quiz Component Tests', () => {
           cy.get('.btn.btn-primary').contains('Start Quiz').click()
           cy.wait('@getQuestions')
         })
+
+
+    it('should show completion screen with score', () => {
+      cy.get('.btn.btn-primary').first().click()
+      cy.get('h2').contains('Quiz Completed')
+      cy.get('.alert.alert-success').should('be.visible')
+    })
+
+    it('should allow starting new quiz after completion', () => {
+      cy.get('.btn.btn-primary').first().click()
+      cy.get('.btn.btn-primary').contains('Take New Quiz').click()
+      cy.wait('@getQuestions')
+      cy.get('h2').should('exist')
+    })
+  })
+})
