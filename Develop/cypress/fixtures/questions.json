@@ -1,0 +1,222 @@
+[
+    {
+      "_id": "1",
+      "question": "What does HTML stand for?",
+      "answers": [
+        {
+          "text": "Hyper Text Markup Language",
+          "isCorrect": true
+        },
+        {
+          "text": "High Tech Machine Learning",
+          "isCorrect": false
+        },
+        {
+          "text": "Hybrid Text Memory Language",
+          "isCorrect": false
+        },
+        {
+          "text": "Hyper Transfer Markup Logic",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "_id": "2",
+      "question": "Which of the following is a JavaScript framework?",
+      "answers": [
+        {
+          "text": "Python",
+          "isCorrect": false
+        },
+        {
+          "text": "React",
+          "isCorrect": true
+        },
+        {
+          "text": "Java",
+          "isCorrect": false
+        },
+        {
+          "text": "SQL",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "_id": "3",
+      "question": "What does CSS stand for?",
+      "answers": [
+        {
+          "text": "Computer Style Sheets",
+          "isCorrect": false
+        },
+        {
+          "text": "Creative Style System",
+          "isCorrect": false
+        },
+        {
+          "text": "Cascading Style Sheets",
+          "isCorrect": true
+        },
+        {
+          "text": "Coded Style Syntax",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "_id": "4",
+      "question": "Which data structure follows the LIFO principle?",
+      "answers": [
+        {
+          "text": "Queue",
+          "isCorrect": false
+        },
+        {
+          "text": "Stack",
+          "isCorrect": true
+        },
+        {
+          "text": "Array",
+          "isCorrect": false
+        },
+        {
+          "text": "Tree",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "_id": "5",
+      "question": "What is the purpose of Git?",
+      "answers": [
+        {
+          "text": "Database Management",
+          "isCorrect": false
+        },
+        {
+          "text": "Version Control",
+          "isCorrect": true
+        },
+        {
+          "text": "Web Hosting",
+          "isCorrect": false
+        },
+        {
+          "text": "Package Management",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "_id": "6",
+      "question": "What is TypeScript?",
+      "answers": [
+        {
+          "text": "A programming language that compiles to JavaScript",
+          "isCorrect": true
+        },
+        {
+          "text": "A text editor",
+          "isCorrect": false
+        },
+        {
+          "text": "A testing framework",
+          "isCorrect": false
+        },
+        {
+          "text": "A database system",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "_id": "7",
+      "question": "What does API stand for?",
+      "answers": [
+        {
+          "text": "Advanced Programming Interface",
+          "isCorrect": false
+        },
+        {
+          "text": "Automated Program Integration",
+          "isCorrect": false
+        },
+        {
+          "text": "Application Programming Interface",
+          "isCorrect": true
+        },
+        {
+          "text": "Advanced Program Implementation",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "_id": "8",
+      "question": "Which of these is a NoSQL database?",
+      "answers": [
+        {
+          "text": "PostgreSQL",
+          "isCorrect": false
+        },
+        {
+          "text": "MySQL",
+          "isCorrect": false
+        },
+        {
+          "text": "MongoDB",
+          "isCorrect": true
+        },
+        {
+          "text": "Oracle",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "_id": "9",
+      "question": "What is the primary purpose of npm?",
+      "answers": [
+        {
+          "text": "Network Protocol Management",
+          "isCorrect": false
+        },
+        {
+          "text": "Node Package Manager",
+          "isCorrect": true
+        },
+        {
+          "text": "New Project Module",
+          "isCorrect": false
+        },
+        {
+          "text": "Node Processing Method",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "_id": "10",
+      "question": "What does DOM stand for in web development?",
+      "answers": [
+        {
+          "text": "Digital Ordinance Model",
+          "isCorrect": false
+        },
+        {
+          "text": "Document Object Model",
+          "isCorrect": true
+        },
+        {
+          "text": "Data Object Model",
+          "isCorrect": false
+        },
+        {
+          "text": "Digital Object Method",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
