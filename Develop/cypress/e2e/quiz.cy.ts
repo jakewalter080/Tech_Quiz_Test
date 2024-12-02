@@ -62,3 +62,14 @@ describe('Tech Quiz E2E Tests', () => {
               cy.get('.alert.alert-success').should('be.visible')
               cy.get('.btn.btn-primary').contains('Take New Quiz').should('be.visible')
             })
+
+            it('should start new quiz after completion', () => {
+                cy.get('.btn.btn-primary').contains('Start Quiz').click()
+                for (let i = 0; i < 10; i++) {
+                  cy.get('.btn.btn-primary').first().should('exist').click()
+                }
+                cy.get('.btn.btn-primary').contains('Take New Quiz').click()
+                cy.get('h2').should('exist')
+                cy.get('.alert.alert-secondary').should('have.length.at.least', 2)
+              })
+            })
