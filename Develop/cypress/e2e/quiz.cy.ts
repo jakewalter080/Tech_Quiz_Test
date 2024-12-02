@@ -45,3 +45,9 @@ describe('Tech Quiz E2E Tests', () => {
             cy.get('@firstQuestion').should('not.equal', text)
           })
         })
+        it('should track quiz progress', () => {
+            for (let i = 0; i < 3; i++) {
+              cy.get('.btn.btn-primary').first().should('exist').click()
+            }
+          })
+        })
