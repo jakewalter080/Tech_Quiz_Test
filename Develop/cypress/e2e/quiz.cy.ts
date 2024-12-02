@@ -30,3 +30,18 @@ describe('Tech Quiz E2E Tests', () => {
         cy.get('.spinner-border').should('not.exist')
       })
     })
+
+    describe('Quiz Interaction', () => {
+        beforeEach(() => {
+          cy.get('.btn.btn-primary').contains('Start Quiz').click()
+        })
+        it('should navigate through all questions', () => {
+
+          cy.get('h2').invoke('text').as('firstQuestion')
+    
+          cy.get('.btn.btn-primary').first().click()
+    
+          cy.get('h2').invoke('text').then((text) => {
+            cy.get('@firstQuestion').should('not.equal', text)
+          })
+        })
