@@ -51,3 +51,22 @@ describe('Quiz Component Tests', () => {
         cy.get('.alert.alert-success').contains('1/2')
       })
     })
+
+    describe('Quiz Completion', () => {
+        beforeEach(() => {
+          cy.intercept('GET', '/api/questions/random', {
+            body: [
+              {
+                _id: '1',
+                question: 'Test Question',
+                answers: [
+                  { text: 'Correct', isCorrect: true },
+                  { text: 'Wrong', isCorrect: false }
+                ]
+              }
+            ]
+          }).as('getQuestions')
+    
+          cy.get('.btn.btn-primary').contains('Start Quiz').click()
+          cy.wait('@getQuestions')
+        })
