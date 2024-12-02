@@ -13,7 +13,7 @@ describe('Quiz Component Tests', () => {
 
   describe('Quiz Start', () => {
     beforeEach(() => {
-      // Mock the API response with test questions
+
       cy.intercept('GET', '/api/questions/random', {
         body: [
           {
@@ -36,5 +36,18 @@ describe('Quiz Component Tests', () => {
         ]
       }).as('getQuestions')
     })
+    it('should move to next question after answering', () => {
+        cy.get('h2').contains('First Question')
+        cy.get('.btn.btn-primary').first().click()
+        cy.get('h2').contains('Second Question')
+      })
+  
+      it('should track score correctly', () => {
 
-    
+        cy.get('.btn.btn-primary').first().click()
+
+        cy.get('.btn.btn-primary').last().click()
+        
+        cy.get('.alert.alert-success').contains('1/2')
+      })
+    })
