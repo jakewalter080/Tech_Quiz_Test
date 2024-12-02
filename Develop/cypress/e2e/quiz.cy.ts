@@ -73,3 +73,30 @@ describe('Tech Quiz E2E Tests', () => {
                 cy.get('.alert.alert-secondary').should('have.length.at.least', 2)
               })
             })
+
+            describe('Error Handling', () => {
+                it('should handle API errors gracefully', () => {
+                  cy.intercept('GET', '/api/questions/random', {
+                    statusCode: 500,
+                    body: { error: 'Server error' }
+                  }).as('getQuestionsError')
+            
+                  cy.get('.btn.btn-primary').contains('Start Quiz').click()
+                  cy.wait('@getQuestionsError')
+                  
+                  cy.get('.spinner-border').should('not.exist')
+                })
+            
+                it('should handle network timeout', () => {
+ 
+                  cy.intercept('GET', '/api/questions/random', {
+                    forceNetworkError: true
+                  }).as('getQuestionsTimeout')
+            
+                  cy.get('.btn.btn-primary').contains('Start Quiz').click()
+                  cy.wait('@getQuestionsTimeout')
+
+                  cy.get('.spinner-border').should('not.exist')
+                })
+              })
+            })
