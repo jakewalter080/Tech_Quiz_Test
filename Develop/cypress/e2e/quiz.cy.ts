@@ -51,3 +51,14 @@ describe('Tech Quiz E2E Tests', () => {
             }
           })
         })
+
+        describe('Quiz Completion', () => {
+            it('should complete full quiz flow', () => {
+              cy.get('.btn.btn-primary').contains('Start Quiz').click()
+              for (let i = 0; i < 10; i++) {
+                cy.get('.btn.btn-primary').first().should('exist').click()
+              }
+              cy.get('h2').contains('Quiz Completed').should('be.visible')
+              cy.get('.alert.alert-success').should('be.visible')
+              cy.get('.btn.btn-primary').contains('Take New Quiz').should('be.visible')
+            })
